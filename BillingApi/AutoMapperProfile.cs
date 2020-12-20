@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BillingApi.Dtos.CharacterDtos;
 using BillingApi.Model;
+using BillingApi.Dtos.AppDtos;
 
 namespace WebapiTest3
 {
@@ -15,6 +16,11 @@ namespace WebapiTest3
             CreateMap<Character, GetCharacterDto>();
             CreateMap<AddCharacterDto,Character>();
             CreateMap<UpdatedCharacterDto, Character>();
+
+
+            CreateMap<App, GetAppDto>();
+            CreateMap<AddAppDto, App>();
+            CreateMap<UpdatedAppDto, App>();
         }
     }
 }

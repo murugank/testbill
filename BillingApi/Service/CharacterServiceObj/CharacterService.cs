@@ -56,7 +56,7 @@ namespace BillingApi.Service.CharacterServiceObj
         {
             ServiceResponce<GetCharacterDto> serviceResponce = new ServiceResponce<GetCharacterDto>();
             //Character character = characters.FirstOrDefault(c => c.Id == ID);
-            Character character = await _dataContext.Characters.FirstOrDefaultAsync(c => c.Id == ID);
+            Character character = await _dataContext.Characters.FirstOrDefaultAsync(c => c.Id == ID && c.IsActive == true);
             if (character != null)
             {
                 serviceResponce.Data = _mapper.Map<GetCharacterDto>(character);
@@ -74,7 +74,7 @@ namespace BillingApi.Service.CharacterServiceObj
             ServiceResponce<GetCharacterDto> serviceResponce = new ServiceResponce<GetCharacterDto>();
             try {
                 //Character character = characters.FirstOrDefault(c => c.Id == updatedCharacter.Id);
-                Character character = await _dataContext.Characters.FirstOrDefaultAsync(c => c.Id == updatedCharacter.Id);
+                Character character = await _dataContext.Characters.FirstOrDefaultAsync(c => c.Id == updatedCharacter.Id && c.IsActive == true);
                 character.Model = updatedCharacter.Model;
                 character.Color = updatedCharacter.Color;
                 character.CharacterType = updatedCharacter.CharacterType;
