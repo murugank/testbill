@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using BillingApi.Service.CharacterServiceObj;
 using BillingApi.Service.AppServiceObj;
 using BillingApi.Service.BaseCurrencyServiceObj;
-
+using BillingApi.Service.CurrencyRateServiceObj;
+using BillingApi.Service.PlatformPriceServiceObj;
 namespace BillingApi.Service
 {
     public static class ServiceCollection
@@ -16,6 +17,8 @@ namespace BillingApi.Service
             services.AddScoped<ICharacterService, CharacterService>();
             services.AddScoped<IAppService, AppService>();
             services.AddScoped<IBaseCurrencyService, BaseCurrencyService>();
+            services.AddScoped<ICurrencyRateService, CurrencyRateService>();
+            services.AddScoped<IPlatformPriceService, PlatformPriceService>();
             return services;
         }
     }

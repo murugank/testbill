@@ -15,7 +15,8 @@ namespace BillingApi.Data
         }
         public DbSet<Character> Characters { get; set; }
         public DbSet<App> Apps { get; set; }
-
         public DbSet<BaseCurrency> BaseCurrencys { get; set; }
+        public DbSet<CurrencyRate> CurrencyRates { get; set; }
+        public DbSet<PlatformPrice> PlatformPrices { get; set; }
     }
 }

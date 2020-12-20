@@ -4,14 +4,16 @@ using BillingApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BillingApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201220052733_addedCurrencyRate")]
+    partial class addedCurrencyRate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,39 +154,6 @@ namespace BillingApi.Migrations
                     b.HasKey("CurrencyRateId");
 
                     b.ToTable("CurrencyRates");
-                });
-
-            modelBuilder.Entity("BillingApi.Model.PlatformPrice", b =>
-                {
-                    b.Property<int>("PlatformPriceId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("GstPlatformRate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("LastModifiedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("LastModifiedon")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("PlatformRate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("PlatformPriceId");
-
-                    b.ToTable("PlatformPrices");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,6 +7,8 @@ using BillingApi.Dtos.CharacterDtos;
 using BillingApi.Model;
 using BillingApi.Dtos.AppDtos;
 using BillingApi.Dtos.BaseCurrencyDtos;
+using BillingApi.Dtos.CurrencyRateDtos;
+using BillingApi.Dtos.PlatformPriceDtos;
 
 namespace WebapiTest3
 {
@@ -18,15 +20,21 @@ namespace WebapiTest3
             CreateMap<AddCharacterDto,Character>();
             CreateMap<UpdatedCharacterDto, Character>();
 
-
             CreateMap<App, GetAppDto>();
             CreateMap<AddAppDto, App>();
             CreateMap<UpdatedAppDto, App>();
 
-
             CreateMap<BaseCurrency, GetBaseCurrencyDto>();
             CreateMap<AddBaseCurrencyDto, BaseCurrency>();
             CreateMap<UpdatedBaseCurrencyDto, BaseCurrency>();
+
+            CreateMap<CurrencyRate, GetCurrencyRateDto>();
+            CreateMap<AddCurrencyRateDto, CurrencyRate>();
+            CreateMap<UpdatedCurrencyRateDto, CurrencyRate>();
+
+            CreateMap<PlatformPrice, GetPlatformPriceDto>();
+            CreateMap<AddPlatformPriceDto, PlatformPrice>();
+            CreateMap<UpdatedPlatformPriceDto, PlatformPrice>();
         }
     }
 }
