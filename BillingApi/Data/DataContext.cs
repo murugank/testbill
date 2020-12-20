@@ -18,5 +18,7 @@ namespace BillingApi.Data
         public DbSet<BaseCurrency> BaseCurrencys { get; set; }
         public DbSet<CurrencyRate> CurrencyRates { get; set; }
         public DbSet<PlatformPrice> PlatformPrices { get; set; }
+        public DbSet<BillingandDueDay> BillingandDueDays { get; set; }
+
     }
 }
