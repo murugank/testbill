@@ -9,6 +9,7 @@ using BillingApi.Service.BaseCurrencyServiceObj;
 using BillingApi.Service.CurrencyRateServiceObj;
 using BillingApi.Service.PlatformPriceServiceObj;
 using BillingApi.Service.BillingandDueDayServiceObj;
+using BillingApi.Service.AppsRateServiceObj;
 namespace BillingApi.Service
 {
     public static class ServiceCollection
@@ -21,6 +22,7 @@ namespace BillingApi.Service
             services.AddScoped<ICurrencyRateService, CurrencyRateService>();
             services.AddScoped<IPlatformPriceService, PlatformPriceService>();
             services.AddScoped<IBillingandDueDayService, BillingandDueDayService>();
+            services.AddScoped<IAppsRateService, AppsRateService>();
             return services;
         }
     }

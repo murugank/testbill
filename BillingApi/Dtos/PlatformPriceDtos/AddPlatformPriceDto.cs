@@ -8,7 +8,7 @@ namespace BillingApi.Dtos.PlatformPriceDtos
 {
     public class AddPlatformPriceDto
     {
-        public int PlatformPriceId { get; set; } = 0;
+       
         public decimal PlatformRate { get; set; } = 0;
         public decimal GstPlatformRate { get; set; } = 0;
         public decimal CurrencyValue { get; set; } = 1;

@@ -8,7 +8,7 @@ namespace BillingApi.Dtos.BaseCurrencyDtos
 {
     public class AddBaseCurrencyDto
     {
-        public int BaseCurrencyId { get; set; } = 0;
+        
         public string BaseCurrencyCode { get; set; } = "INR";
         public int CreatedBy { get; set; } = 0;
         

@@ -10,6 +10,7 @@ using BillingApi.Dtos.BaseCurrencyDtos;
 using BillingApi.Dtos.CurrencyRateDtos;
 using BillingApi.Dtos.PlatformPriceDtos;
 using BillingApi.Dtos.BillingandDueDayDtos;
+using BillingApi.Dtos.AppsRateDtos;
 
 namespace WebapiTest3
 {
@@ -40,6 +41,10 @@ namespace WebapiTest3
             CreateMap<BillingandDueDay, GetBillingandDueDayDto>();
             CreateMap<AddBillingandDueDayDto, BillingandDueDay>();
             CreateMap<UpdatedBillingandDueDayDto, BillingandDueDay>();
+
+            CreateMap<AppsRate, GetAppsRateDto>();
+            CreateMap<AddAppsRateDto, AppsRate>();
+            CreateMap<UpdatedAppDto, AppsRate>();
         }
     }
 }
