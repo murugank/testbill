@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BillingApi.Dtos.CharacterDtos;
 using BillingApi.Model;
 using BillingApi.Dtos.AppDtos;
+using BillingApi.Dtos.BaseCurrencyDtos;
 
 namespace WebapiTest3
 {
@@ -21,6 +22,11 @@ namespace WebapiTest3
             CreateMap<App, GetAppDto>();
             CreateMap<AddAppDto, App>();
             CreateMap<UpdatedAppDto, App>();
+
+
+            CreateMap<BaseCurrency, GetBaseCurrencyDto>();
+            CreateMap<AddBaseCurrencyDto, BaseCurrency>();
+            CreateMap<UpdatedBaseCurrencyDto, BaseCurrency>();
         }
     }
 }
