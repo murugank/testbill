@@ -11,7 +11,7 @@ using BillingApi.Dtos.CurrencyRateDtos;
 using BillingApi.Dtos.PlatformPriceDtos;
 using BillingApi.Dtos.BillingandDueDayDtos;
 using BillingApi.Dtos.AppsRateDtos;
-
+using BillingApi.Dtos.SubscriptionHeadDtos;
 namespace WebapiTest3
 {
     public class AutoMapperProfile: Profile
@@ -44,7 +44,11 @@ namespace WebapiTest3
 
             CreateMap<AppsRate, GetAppsRateDto>();
             CreateMap<AddAppsRateDto, AppsRate>();
-            CreateMap<UpdatedAppDto, AppsRate>();
+            CreateMap<UpdatedAppsRateDto, AppsRate>();
+
+            CreateMap<SubscriptionHead, GetSubscriptionHeadDto>();
+            CreateMap<AddSubscriptionHeadDto, SubscriptionHead>();
+            CreateMap<UpdatedSubscriptionHeadDto, SubscriptionHead>();
         }
     }
 }
