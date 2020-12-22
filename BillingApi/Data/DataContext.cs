@@ -21,6 +21,7 @@ namespace BillingApi.Data
         public DbSet<BillingandDueDay> BillingandDueDays { get; set; }
         public DbSet<AppsRate> AppsRates { get; set; }
         public DbSet<SubscriptionHead> SubscriptionHeads { get; set; }
+        public DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
 
     }
 }

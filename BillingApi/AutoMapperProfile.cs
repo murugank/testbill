@@ -12,6 +12,8 @@ using BillingApi.Dtos.PlatformPriceDtos;
 using BillingApi.Dtos.BillingandDueDayDtos;
 using BillingApi.Dtos.AppsRateDtos;
 using BillingApi.Dtos.SubscriptionHeadDtos;
+using BillingApi.Dtos.SubscriptionDetailDtos;
+
 namespace WebapiTest3
 {
     public class AutoMapperProfile: Profile
@@ -49,6 +51,10 @@ namespace WebapiTest3
             CreateMap<SubscriptionHead, GetSubscriptionHeadDto>();
             CreateMap<AddSubscriptionHeadDto, SubscriptionHead>();
             CreateMap<UpdatedSubscriptionHeadDto, SubscriptionHead>();
+
+            CreateMap<SubscriptionDetail, GetSubscriptionDetailDto>();
+            CreateMap<AddSubscriptionDetailDto, SubscriptionDetail>();
+            CreateMap<UpdatedSubscriptionDetailDto, SubscriptionDetail>();
         }
     }
 }
