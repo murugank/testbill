@@ -15,7 +15,7 @@ namespace BillingApi
         {
             CreateHostBuilder(args).Build().Run();
         }
-
+        //test check out sub 1
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
